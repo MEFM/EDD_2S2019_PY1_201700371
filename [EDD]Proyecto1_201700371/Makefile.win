@@ -1,0 +1,46 @@
+# Project: [EDD]Proyecto1_201700371
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o NodoDisperso.o CuboDispersoI.o Arbol.o NodoArbol.o NivelCubo.o ImportImage.o
+LINKOBJ  = main.o NodoDisperso.o CuboDispersoI.o Arbol.o NodoArbol.o NivelCubo.o ImportImage.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = [EDD]Proyecto1_201700371.exe
+CXXFLAGS = $(CXXINCS) -std=gnu++11 -g3 -std=c++14
+CFLAGS   = $(INCS) -std=gnu++11 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+NodoDisperso.o: NodoDisperso.cpp
+	$(CPP) -c NodoDisperso.cpp -o NodoDisperso.o $(CXXFLAGS)
+
+CuboDispersoI.o: CuboDispersoI.cpp
+	$(CPP) -c CuboDispersoI.cpp -o CuboDispersoI.o $(CXXFLAGS)
+
+Arbol.o: Arbol.cpp
+	$(CPP) -c Arbol.cpp -o Arbol.o $(CXXFLAGS)
+
+NodoArbol.o: NodoArbol.cpp
+	$(CPP) -c NodoArbol.cpp -o NodoArbol.o $(CXXFLAGS)
+
+NivelCubo.o: NivelCubo.cpp
+	$(CPP) -c NivelCubo.cpp -o NivelCubo.o $(CXXFLAGS)
+
+ImportImage.o: ImportImage.cpp
+	$(CPP) -c ImportImage.cpp -o ImportImage.o $(CXXFLAGS)

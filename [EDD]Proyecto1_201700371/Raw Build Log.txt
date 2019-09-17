@@ -1,0 +1,30 @@
+Rebuilding whole project...
+--------
+- Project Filename: C:\Users\mynor\Desktop\Tok\Estructuras_pre\[EDD]Proyecto1_201700371\[EDD]Proyecto1_201700371.dev
+- Compiler Name: TDM-GCC 4.9.2 64-bit Release
+
+Building makefile...
+--------
+- Filename: C:\Users\mynor\Desktop\Tok\Estructuras_pre\[EDD]Proyecto1_201700371\Makefile.win
+
+Processing makefile...
+--------
+- Makefile Processor: C:\Program Files (x86)\Dev-Cpp\MinGW64\bin\mingw32-make.exe
+- Command: mingw32-make.exe -f "C:\Users\mynor\Desktop\Tok\Estructuras_pre\[EDD]Proyecto1_201700371\Makefile.win" clean all
+
+rm.exe -f main.o NodoDisperso.o CuboDispersoI.o Arbol.o NodoArbol.o NivelCubo.o [EDD]Proyecto1_201700371.exe
+g++.exe -D__DEBUG__ -c main.cpp -o main.o -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -std=gnu++11 -g3 -std=c++11
+g++.exe -D__DEBUG__ -c NodoDisperso.cpp -o NodoDisperso.o -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -std=gnu++11 -g3 -std=c++11
+g++.exe -D__DEBUG__ -c CuboDispersoI.cpp -o CuboDispersoI.o -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -std=gnu++11 -g3 -std=c++11
+g++.exe -D__DEBUG__ -c Arbol.cpp -o Arbol.o -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -std=gnu++11 -g3 -std=c++11
+g++.exe -D__DEBUG__ -c NodoArbol.cpp -o NodoArbol.o -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -std=gnu++11 -g3 -std=c++11
+g++.exe -D__DEBUG__ -c NivelCubo.cpp -o NivelCubo.o -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -std=gnu++11 -g3 -std=c++11
+g++.exe -D__DEBUG__ main.o NodoDisperso.o CuboDispersoI.o Arbol.o NodoArbol.o NivelCubo.o -o [EDD]Proyecto1_201700371.exe -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+
+Compilation results...
+--------
+- Errors: 0
+- Warnings: 0
+- Output Filename: C:\Users\mynor\Desktop\Tok\Estructuras_pre\[EDD]Proyecto1_201700371\[EDD]Proyecto1_201700371.exe
+- Output Size: 2.45548057556152 MiB
+- Compilation Time: 4.13s
