@@ -217,26 +217,29 @@ int CuboDispersoI::getNivel(){
 void CuboDispersoI::imprimir(){
 //	rai = this->raiz;
 cout<<"Hola";
-	if(raiz == NULL){
+	if(this->raiz == NULL){
 		cout<<"No hay nada en este nivel."<<endl;
 	}
 	else{
 	//	cout<<"que sad :("<< raiz->getRGB()<<"\n";
-		NodoDisperso* temporal = raiz;
+		NodoDisperso* temporal = this->raiz;
 		bool validador1 = true;
 		bool validador2 = true;
 		
-		while(temporal->abajo != NULL){
+		do{
+			
 			cout<<"Si entro aqui\n";
+			cout<<temporal->getRGB()<<"Ese es el color"<<" Fila y Columna: "<<temporal->getX()<<" "<<temporal->getY()<<endl;
 			if(temporal->siguiente == NULL){
+			
 				temporal = temporal->abajo;
 			}else{
 				cout<<temporal->getRGB()<<" "<<temporal->getX()<<" "<<temporal->getY()<<endl;
 				temporal = temporal->siguiente;
-			}
-		}
+			}			
+		
+		}while(temporal != NULL);
 	}
 }
-
 
 

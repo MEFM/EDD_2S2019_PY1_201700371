@@ -35,6 +35,8 @@ class CuboDispersoI
 		
 		void locura(CuboDispersoI*);
 		
+		
+		
 		CuboDispersoI();
 		CuboDispersoI(int, CuboDispersoI*);
 		~CuboDispersoI();

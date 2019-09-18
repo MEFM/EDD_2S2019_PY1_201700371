@@ -32,8 +32,10 @@ int noArchivo = 0;
 Arbol arbolin;
 
 NivelCubo *nivel;
-CuboDispersoI *lista;
+CuboDispersoI *lista = new CuboDispersoI();
 string nombre_imagen = "";
+
+CuboDispersoI cub;
 
 void atolon(){
 	//nivel.~NivelCubo();
@@ -97,6 +99,7 @@ void archivos(int id, string archivo){
 		ifstream file(name);
 		string linea = "";
 		char a = '\n';
+		
 		while(file.good()){
 			filas = filas + 1;
 			getline(file, linea, a);
@@ -119,7 +122,6 @@ void conta(string a){
 	
 	if(tokem != NULL){
 		//CuboDispersoI lista;
-		lista = new CuboDispersoI();
 		while(tokem != NULL){
 			columnas = columnas + 1;
 			//printf("Token: %s\n", tokem);
@@ -133,7 +135,8 @@ void conta(string a){
 				lista->insertar(tokem, columnas, filas);
 				
 			}			
-			
+		
+		//	system("pause");
 			tokem = strtok(NULL ,delim);			
 		}
 		//lista->imprimir();
@@ -172,6 +175,7 @@ int main() {
 			atolon();
 			//arbolin.insertar(ini,1,"sdf",nivel);
 			
+		
 			arbolin.insertar(nombre_imagen.length(), nombre_imagen, nivel, raiz);	
 			cout<<"Aca biene la impresion perro\n"<<raiz->nombre;
 			//arbolin.mostrarImagenes(contador, raiz);	
@@ -195,7 +199,13 @@ int main() {
 			default: validador = false; break;
 		}
 	system("cls");
-	nivel->imprimir();
+	cub.insertar("er", 3,4);
+	cub.insertar("er", 3,90);
+	cub.insertar("er", 3,100);
+	cub.imprimir();
+	//nivel->imprimir();
+	//nivel->imprimirNivel();
+	//	lista->imprimir();
 //	nivel->imprimirNivel();
 			
 	}while(validador);
@@ -273,5 +283,4 @@ void reportes(){
 			}	
 		}while(validador);
 }
-
 

@@ -102,6 +102,7 @@ void NivelCubo::imprimirNivel(){
 		do{	
 		//	cout<<temporal->getNivel()<<temporal->a<<endl;
 			cout<<"Cosi\n";
+			cout<<temporal->getNivel()<<" este nodo pertenece ese nivel\n";
 			//temporal->imprimir();
 			cout<<endl;
 			//temporal = temporal->subida;
