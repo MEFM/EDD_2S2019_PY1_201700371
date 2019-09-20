@@ -199,9 +199,10 @@ int main() {
 			default: validador = false; break;
 		}
 	system("cls");
-	cub.insertar("er", 3,4);
-	cub.insertar("er", 3,90);
-	cub.insertar("er", 3,100);
+	cub.insertar("er4g", 3,4);
+	cub.insertar("ersdf", 5,90);
+	cub.insertar("ersdfg", 6,100);
+	
 	cub.imprimir();
 	//nivel->imprimir();
 	//nivel->imprimirNivel();

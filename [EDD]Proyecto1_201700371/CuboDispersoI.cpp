@@ -4,7 +4,7 @@
 
 CuboDispersoI::CuboDispersoI()
 {
- raiz = new NodoDisperso("Raiz", 0, 0);
+ raiz = new NodoDisperso("Raiz", -1, -1);
 }
 
 void CuboDispersoI::nuevoNivel(){
@@ -67,31 +67,32 @@ NodoDisperso* CuboDispersoI::buscarNivel(int nivel){
 
 NodoDisperso* CuboDispersoI::insertarColumna(NodoDisperso* nuevo, NodoDisperso* cabeceraColumna){
 	NodoDisperso* temporal = cabeceraColumna;
-	bool validador = false;
+	bool validador = true;
 	
 	while (true){
 		if(temporal->getX() == nuevo->getX()){
 			//Si se agrega la primera columna despues de la raíz
 			
-			temporal->getY() == nuevo->getY();
-			temporal->getRGB() == nuevo->getRGB();
+			temporal->setY(nuevo->getY());
+			temporal->setRGB(nuevo->getRGB());
 			return temporal;
 		}
-		else if(temporal->getX() < nuevo->getX()){
+		else if(temporal->getX() > nuevo->getX()){
 			//se tiene que insertar antes del temporal
-			validador = false;
+			validador = true;
 			break;
 		}
 		else if(temporal->siguiente != NULL){
 			temporal = temporal->siguiente;
 		}
 		else{
+			validador = false;
 			//Se inserta el nuevo despues de temporal
 			break;
 		}
 	}
 	
-	if(validador == true){
+	if(validador){
 		//Se inserta antes a temporal
 		nuevo->siguiente = temporal;
 		temporal->anterior->siguiente = nuevo;
@@ -111,14 +112,13 @@ NodoDisperso* CuboDispersoI::insertarFila(NodoDisperso* nuevo, NodoDisperso* cab
 	while (true){
 		if(temporal->getY() == nuevo->getY()){
 			//Si se agrega la primera columna despues de la raíz
-			int nue = nuevo->getX();
-			nue = temporal->getX();
-		//	temporal->getX() = nuevo->getX();
-			string rb = temporal->getRGB();
-			rb = nuevo->getRGB();
+			
+			temporal->setRGB(nuevo->getRGB());
+			temporal->setX(nuevo->getX());
+			
 			return temporal;
 		}
-		else if(temporal->getY() < nuevo->getY()){
+		else if(temporal->getY() > nuevo->getY()){
 			//se tiene que insertar antes del temporal
 			validador = false;
 			break;
@@ -127,6 +127,7 @@ NodoDisperso* CuboDispersoI::insertarFila(NodoDisperso* nuevo, NodoDisperso* cab
 			temporal = temporal->abajo;
 		}
 		else{
+			validador = false;
 			//Se inserta el nuevo despues de temporal
 			break;
 		}
@@ -222,23 +223,37 @@ cout<<"Hola";
 	}
 	else{
 	//	cout<<"que sad :("<< raiz->getRGB()<<"\n";
-		NodoDisperso* temporal = this->raiz;
-		bool validador1 = true;
-		bool validador2 = true;
+		NodoDisperso* temporal = this->raiz;	
+		NodoDisperso* temporal2;
+	//	NodoDisperso* auxiliar2 = this->raiz;
 		
-		do{
+		
+		while(temporal != NULL){
+			temporal2 = temporal;
+			while(temporal2 != NULL){
+				cout<<temporal->getRGB()<<temporal->getY()<<endl;
+				temporal2 = temporal2->siguiente;
+				
+			}
+				temporal = temporal->abajo;
+				
+			
+		}
+		
+		/*do{
 			
 			cout<<"Si entro aqui\n";
-			cout<<temporal->getRGB()<<"Ese es el color"<<" Fila y Columna: "<<temporal->getX()<<" "<<temporal->getY()<<endl;
+			cout<<temporal->getRGB()<<"Ese es el color Fila y Columna: "<<temporal->getX()<<" "<<temporal->getY()<<endl;
 			if(temporal->siguiente == NULL){
 			
 				temporal = temporal->abajo;
 			}else{
-				cout<<temporal->getRGB()<<" "<<temporal->getX()<<" "<<temporal->getY()<<endl;
+				//cout<<temporal->getRGB()<<" "<<temporal->getX()<<" "<<temporal->getY()<<endl;
 				temporal = temporal->siguiente;
 			}			
+				//cout<<temporal->getRGB()<<" "<<temporal->getX()<<" "<<temporal->getY()<<endl;
 		
-		}while(temporal != NULL);
+		}while(temporal != NULL);*/
 	}
 }
 

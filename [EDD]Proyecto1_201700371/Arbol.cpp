@@ -42,6 +42,15 @@ void Arbol::mostrarImagenes(int contador, NodoArbol *&arbol){
 	
 }
 
+void Arbol::mostrar(int contador, NodoArbol *&arbol){
+	if(arbol==NULL){
+		return;
+	}else{
+		mostrar(contador++, arbol->derecho);
+		cout<<contador<<"{}";
+	}
+}
+
 void Arbol::mostrarImagenesSeleccion(int contador, NodoArbol *&arbol){
 	string imagenSeleccion = "";
 	this->mostrarImagenes(contador, arbol);

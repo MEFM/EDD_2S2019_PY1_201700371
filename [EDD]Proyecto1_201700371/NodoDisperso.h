@@ -8,13 +8,15 @@ using namespace std;
 class NodoDisperso
 {
 	private:
+	
+	
+	public:
+		static int nivel;
 		string RGB;
 		int x;
 		int y;
 		int z;
 	
-	public:
-		static int nivel;
 		NodoDisperso* siguiente;
 		NodoDisperso* anterior;
 		NodoDisperso* arriba;

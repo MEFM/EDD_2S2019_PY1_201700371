@@ -20,6 +20,8 @@ class Arbol
 		void mostrarImagenes(int, NodoArbol*&);
 		void mostrarImagenesSeleccion(int, NodoArbol*&);
 		
+		void mostrar(int, NodoArbol*&);
+		
 		void buscarImagenSeleccion(string, NodoArbol *&);
 		
 		Arbol();
